@@ -1,3 +1,8 @@
+# IMPORTANT:
+This project contains images taken from Udacity's "Descriptive Data Science" course where helpful. The following license does not include these images.
+
+# LICENSE:
+
 This is free and unencumbered software released into the public domain.
 
 Anyone is free to copy, modify, publish, use, compile, sell, or
