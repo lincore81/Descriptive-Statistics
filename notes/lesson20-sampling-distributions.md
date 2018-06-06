@@ -10,7 +10,7 @@
 7. The distribution of sample means is called **sampling distribution**. It is normally distributed. *Observation: This seems to be generally true, but I don't understand it completely.*
 8. The probability that the average of 2D4 is greater than `3` is `0.375`. Out of the `16` possible samples, the following `6` have a mean of at least `3`: `[(2, 4), (3, 3), (3, 4), (4, 2), (4, 3), (4, 4)]`. The proportion of these samples relative to the population equals `6/16 = 0.375`.
 9. Such calculations are only possible for very small populations, because the number of possible samples is N to the power of the sample size. (Thus, for sample size 2: `N=2: 4`, `N=3: 9`, `N=4: 16`, `N=5: 25` ... `N=100: 10,000`) However, there exists a more practical way to compare (the mean of) a single sample with other samples in the distribution. To do this, we have to calculate the **standard deviation of the sampling distribution**.
-10. We call the standard deviation of the sampling distribution **SE**. We calculate the SD of the population and the SE:
+10. For now we name the standard deviation of the sampling distribution **SE**. We calculate the SD of the population and the SE:
 ```
   data: [1, 1.5, 2, 2.5, 1.5, 2, 2.5, 3, 2, 2.5, 3, 3.5, 2.5, 3, 3.5, 4]
   len : 16
@@ -30,3 +30,10 @@
 ```
 11. The population SD (sigma) and the SD of the sampling distribution have a relationship to each other.
 12. The ratio of the population SD (sigma) to SE equals `1.4142135623730951`, which is the square root of 2. *Observation: Let n be the sample size, the relationship between sigma, SE and n is `sigma/SE = sqrt(n)`.*
+13. SE denotes the standard deviation of distribution of sample means - or sampling distribution. We manipulate the previously shown formular to determine SE: 
+```
+    sigma/SE = sqrt(n)   | * SE
+    sigma = sqrt(n) * SE | / sqrt(n)
+    SE = sigma/sqrt(n)
+```
+14. We can now answer the question where on the distribution of sample means a sample will lie for any population. For all sampling distributions where every value is the mean of a sample of size n `SE = population SD / sqrt(n)`. This is callled the **Central Limit Theorem**. No matter the shape of a population, the sampling distribution of reasonably sized samples will be relatively normal. The SD of the sampling distribution is `SE = population SD / sqrt(n)`, as previously stated. SE stands for **standard error**.
