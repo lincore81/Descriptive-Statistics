@@ -205,4 +205,4 @@ JOIN orders AS o
   ON o.account_id = a.id
  AND o.occurred_at 
     BETWEEN '2015-01-01'
-         AND '2016-01-01';
+        AND '2016-01-01';
