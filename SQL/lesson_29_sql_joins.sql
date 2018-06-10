@@ -40,7 +40,7 @@ ORDER BY a.name;
 -- dividing by zero.
 
 SELECT
-	r.name region, 
+    r.name region, 
     a.name account, 
     o.total_amt_usd / (o.total + 0.00001) unit_price
 FROM orders AS o
@@ -114,7 +114,7 @@ ORDER BY a.name;
 -- denominator here is helpful total_amt_usd/(total+0.01).
 
 SELECT 
-	r.name region, 
+    r.name region, 
     a.name account,
     o.total_amt_usd / o.total unit_price
 FROM accounts AS a
@@ -139,7 +139,7 @@ JOIN region as r
 -- adding .01 to the denominator here is helpful (total_amt_usd/(total+0.01).
 
 SELECT 
-	r.name region, 
+    r.name region, 
     a.name account,
     o.total_amt_usd / o.total unit_price
 FROM accounts AS a
@@ -165,7 +165,7 @@ ORDER BY unit_price;
 
 -- same as above, except for the last line:
 SELECT 
-	r.name region, 
+    r.name region, 
     a.name account,
     o.total_amt_usd / o.total unit_price
 FROM accounts AS a
@@ -196,7 +196,7 @@ JOIN accounts AS a
 -- columns: occurred_at, account name, order total, and order total_amt_usd.
  
  SELECT 
-	o.occurred_at, 
+    o.occurred_at, 
     a.name, 
     o.total, 
     o.total_amt_usd
@@ -205,4 +205,4 @@ JOIN orders AS o
   ON o.account_id = a.id
  AND o.occurred_at 
     BETWEEN '2015-01-01'
- 	    AND '2016-01-01';
+         AND '2016-01-01';
