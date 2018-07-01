@@ -8,8 +8,51 @@ Comparing samples with other samples is possible by finding and comparing their 
 ### Sampling Distribution:
 The sampling distribution is the distribution of all possible sample means in a population. It is always normally distributed and identical to the population mean.
 
+Example: 
+```
+All possible samples of a dice roll (N=6) with sample size n=2:
+1, 1 (1.0)      1, 2 (1.5)      1, 3 (2.0)      1, 4 (2.5)      1, 5 (3.0)      1, 6 (3.5)  
+2, 1 (1.5)      2, 2 (2.0)      2, 3 (2.5)      2, 4 (3.0)      2, 5 (3.5)      2, 6 (4.0)  
+3, 1 (2.0)      3, 2 (2.5)      3, 3 (3.0)      3, 4 (3.5)      3, 5 (4.0)      3, 6 (4.5)  
+4, 1 (2.5)      4, 2 (3.0)      4, 3 (3.5)      4, 4 (4.0)      4, 5 (4.5)      4, 6 (5.0)  
+5, 1 (3.0)      5, 2 (3.5)      5, 3 (4.0)      5, 4 (4.5)      5, 5 (5.0)      5, 6 (5.5)  
+6, 1 (3.5)      6, 2 (4.0)      6, 3 (4.5)      6, 4 (5.0)      6, 5 (5.5)      6, 6 (6.0)
+
+
+
+The sampling distribution looks like this:
+6 |                                     #
+5 |                              #      #      #
+4 |                       #      #      #      #      #                  
+3 |                #      #      #      #      #      #      #           
+2 |         #      #      #      #      #      #      #      #      #      
+1 |  #      #      #      #      #      #      #      #      #      #      #
+  +--------------------------------------------------------------------------
+    1.0    1.5    2.0    2.5    3.0    3.5    4.0    4.5    5.0    5.5    6.0
+
+
+```
+
 ### Standard Error:
-The standard deviation of the sampling distribution is called Standard Error (SE). The relationship between sample size `n`, standard error `SE` and standard deviation of the population `SD` is: `√n = SE / SD`.
+The standard deviation of the sampling distribution is called Standard Error (SE). The relationship between sample size `n`, standard error `SE` and standard deviation of the population `SD` is: `√n = SD / SE`.
+
+Example:
+```
+Using the data from the previous example, the sampling distribution look like this:
+1, 1.5, 1.5, 2, 2, 2, 2.5, 2.5, 2.5, 2.5, 3, 3, 3, 3, 3, 3.5, 3.5, 3.5, 
+3.5, 3.5, 3.5, 4, 4, 4, 4, 4, 4.5, 4.5, 4.5, 4.5, 5, 5, 5, 5.5, 5.5, 6
+
+We calculate the square deviations and the sum of squares:
+6.25 + 4 + 4 + 2.25 + 2.25 + 2.25 + 1 + 1 + 1 + 1 + 0.25 + 0.25 + 0.25 + 0.25 + 0.25 + 0 + 0 + 0 + 0 + 0 + 0 + 0.25 + 0.25 + 0.25 + 0.25 + 0.25 + 1 + 1 + 1 + 1 + 2.25 + 2.25 + 2.25 + 4 + 4 + 6.25 = 52.5
+
+and finally the standard error:
+SE = √(52.5 / 36) = 1.20761
+
+Let's make sure this is correct:
+√n = SE / SD
+√2 = 3.5 / 1.20761
+
+
 
 ### Central Limit Theorem:
 This theorem states that the sampling distribution is always normal as long as the sample size is large enough.
